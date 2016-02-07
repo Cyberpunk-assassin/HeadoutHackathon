@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Cj-mZ-aO0">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Movies-->
+        <scene sceneID="vyd-DV-ugo">
+            <objects>
+                <viewController storyboardIdentifier="BookMyShowAPIFetchViewController" id="8iG-fW-fsO" customClass="BookMyShowAPIFetchViewController" customModule="Feed_Me" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UZ4-IC-jjz"/>
+                        <viewControllerLayoutGuide type="bottom" id="Awp-eh-Sfx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sHj-lJ-LUo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="107" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="0xG-Vb-K2Q">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="107" id="XiY-pX-Z14" customClass="BookMyShowTableViewCell" customModule="Feed_Me" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XiY-pX-Z14" id="7TN-rc-M9U">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Show Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6z-pj-BhB">
+                                                    <rect key="frame" x="61" y="38" width="155" height="32"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Premiere | U/A | Hindi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSH-0l-2qJ">
+                                                    <rect key="frame" x="61" y="71" width="175" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Today 9:00 pm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tU2-uh-Icn">
+                                                    <rect key="frame" x="61" y="18" width="155" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FvP-Mu-BnQ">
+                                                    <rect key="frame" x="229" y="29" width="50" height="50"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="25"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipToBounds" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="NO"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="29 Sep" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUR-P9-K6r">
+                                                    <rect key="frame" x="229" y="34" width="50" height="44"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="date" destination="eUR-P9-K6r" id="cuP-jt-1ze"/>
+                                            <outlet property="showDetail" destination="bSH-0l-2qJ" id="PNH-sa-6Ed"/>
+                                            <outlet property="showName" destination="i6z-pj-BhB" id="u8S-xN-81c"/>
+                                            <outlet property="timeStamp" destination="tU2-uh-Icn" id="7Fp-x3-fIN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8iG-fW-fsO" id="vC2-1G-GbN"/>
+                                    <outlet property="delegate" destination="8iG-fW-fsO" id="Bpq-18-LVh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Movies" id="O53-R9-MB6"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="bookMyShowTableView" destination="0xG-Vb-K2Q" id="3yC-Tj-Ng8"/>
+                        <segue destination="goH-Sj-lO5" kind="show" identifier="goToShowDetails" id="sbt-ca-LFF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kL4-hl-du5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="752.5" y="341.5"/>
+        </scene>
+        <!--Show Detail View Controllr View Controller-->
+        <scene sceneID="K9U-6b-aLp">
+            <objects>
+                <viewController id="goH-Sj-lO5" customClass="ShowDetailViewControllrViewController" customModule="Feed_Me" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7jA-pA-khj"/>
+                        <viewControllerLayoutGuide type="bottom" id="co2-hc-JBG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tN4-qp-Qn8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Az-kL-rdX">
+                                <rect key="frame" x="0.0" y="14" width="322" height="395"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yz-9k-pHH">
+                                        <rect key="frame" x="16" y="60" width="83" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hindi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rwt-mj-Myu">
+                                        <rect key="frame" x="101" y="60" width="48" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.87843143939971924" green="0.84705889225006104" blue="0.7725490927696228" alpha="0.75" colorSpace="deviceRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jxL-3u-Emi">
+                                <rect key="frame" x="0.0" y="102" width="322" height="153"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6HG-22-Qc8">
+                                <rect key="frame" x="118" y="42" width="86" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zQr-fw-93V">
+                                <rect key="frame" x="15" y="264" width="290" height="131"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5YW-Jl-eNl">
+                                <rect key="frame" x="0.0" y="525" width="325" height="45"/>
+                                <color key="backgroundColor" red="0.28235294119999998" green="0.4431372549" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Book Tickets">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BookButtonPressed:" destination="goH-Sj-lO5" eventType="touchUpInside" id="9iZ-gy-bq1"/>
+                                    <segue destination="fcW-BT-4iJ" kind="show" identifier="SelectSeat" id="bKE-zC-ege"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="phi-iM-hdl">
+                                <rect key="frame" x="158" y="426" width="44" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of seats   :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yIh-fm-Qc3">
+                                <rect key="frame" x="15" y="430" width="137" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="E-mail :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddp-nx-PAK">
+                                <rect key="frame" x="16" y="473" width="65" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EIX-61-cKs">
+                                <rect key="frame" x="79" y="469" width="123" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87450987099999999" green="0.85490202900000001" blue="0.77254909279999995" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="bannerImage" destination="jxL-3u-Emi" id="PzI-ji-RDt"/>
+                        <outlet property="descTextView" destination="zQr-fw-93V" id="Ur3-g1-3qj"/>
+                        <outlet property="language" destination="Rwt-mj-Myu" id="N8h-U8-E0J"/>
+                        <outlet property="numberOfSeats" destination="phi-iM-hdl" id="PnM-CL-a4M"/>
+                        <outlet property="showTitle" destination="3yz-9k-pHH" id="Bn3-9V-VPd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B5b-eG-0sE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1534.5" y="115.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="I9e-t5-M9A">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Cj-mZ-aO0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V0H-nX-0Xy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8iG-fW-fsO" kind="relationship" relationship="rootViewController" id="y0h-b3-iNo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ix-z2-bUf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="208" y="308"/>
+        </scene>
+        <!--Book Seats-->
+        <scene sceneID="qbR-Vv-6bk">
+            <objects>
+                <viewController storyboardIdentifier="FeedBackViewController" id="fcW-BT-4iJ" customClass="SeatSelectionViewController" customModule="Feed_Me" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zsa-XQ-YS3"/>
+                        <viewControllerLayoutGuide type="bottom" id="lSL-8I-0Kb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bxe-HN-iqj">
+                        <rect key="frame" x="0.0" y="0.0" width="367" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="522-sB-CxO">
+                                <rect key="frame" x="15" y="87" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="vDq-kQ-xxo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBM-Sa-c4I">
+                                <rect key="frame" x="15" y="135" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="cfy-mw-rn1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9H-Ge-5sO">
+                                <rect key="frame" x="15" y="183" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="FaC-gC-kWF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOy-G7-DtJ">
+                                <rect key="frame" x="64" y="183" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="Dig-hF-Zmw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dZ-S0-koL">
+                                <rect key="frame" x="113" y="183" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="d8A-oK-49y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgg-lV-jiz">
+                                <rect key="frame" x="179" y="183" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="73W-Jy-4YG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNW-7R-obv">
+                                <rect key="frame" x="228" y="183" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="HFA-Hf-AQJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJw-cJ-tjb">
+                                <rect key="frame" x="276" y="183" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="UZE-dh-ACK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02s-EB-qdC">
+                                <rect key="frame" x="15" y="225" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="5V4-4q-N8u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFX-cC-wdg">
+                                <rect key="frame" x="64" y="225" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="jHr-m4-5Dt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jco-SQ-KDS">
+                                <rect key="frame" x="113" y="225" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="Z6s-60-iDz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkD-pg-Lna">
+                                <rect key="frame" x="179" y="225" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="HdU-Mj-8TN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5QJ-2W-Jnx">
+                                <rect key="frame" x="228" y="225" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="As0-bb-tkC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdu-aq-mUs">
+                                <rect key="frame" x="276" y="225" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="au3-Rc-Cx3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGt-vU-5Nl">
+                                <rect key="frame" x="15" y="269" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="sFA-bd-xFQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tV-HU-pVB">
+                                <rect key="frame" x="64" y="269" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="t00-Jn-yna"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28U-0d-8Dz">
+                                <rect key="frame" x="113" y="269" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="eoI-Y0-rw2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHF-a0-AlN">
+                                <rect key="frame" x="179" y="269" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="GWr-RO-xEO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igJ-Ib-xSF">
+                                <rect key="frame" x="228" y="269" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="PYN-7c-tup"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqn-l8-sIS">
+                                <rect key="frame" x="276" y="269" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="6j7-PS-Ggk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wl4-hH-tkx">
+                                <rect key="frame" x="15" y="317" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="eje-Pl-OJh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuC-xF-S6b">
+                                <rect key="frame" x="64" y="317" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="Bq9-4c-Kan"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yte-mA-oXk">
+                                <rect key="frame" x="113" y="317" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="9WF-lB-dPl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WsY-EQ-b2s">
+                                <rect key="frame" x="179" y="317" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="DUP-l8-VhB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68z-bF-I5G">
+                                <rect key="frame" x="228" y="317" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="ryV-WY-j0m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbo-Mg-C0O">
+                                <rect key="frame" x="276" y="317" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="EaH-Wh-Bsb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ws2-ra-Yj8">
+                                <rect key="frame" x="15" y="368" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="vQG-yW-07R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaV-SV-Gkv">
+                                <rect key="frame" x="64" y="368" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="xzz-YG-Ddy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXh-0e-S0r">
+                                <rect key="frame" x="113" y="368" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="VZN-6M-v2K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDk-HJ-JLa">
+                                <rect key="frame" x="179" y="368" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="XAE-cZ-53l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WM5-Wa-mwd">
+                                <rect key="frame" x="228" y="368" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="AY7-HY-1V3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBl-nR-xTA">
+                                <rect key="frame" x="64" y="413" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="MYk-cz-Dkb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBJ-ws-d9Q">
+                                <rect key="frame" x="113" y="413" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="V1c-YW-W5v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22C-zv-2Jk">
+                                <rect key="frame" x="179" y="413" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="PNS-eY-xI3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0al-1m-w5i">
+                                <rect key="frame" x="228" y="413" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="dbO-be-gX0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WtQ-Oy-PeW">
+                                <rect key="frame" x="276" y="368" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="kin-h1-hiH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqr-sK-fjK">
+                                <rect key="frame" x="64" y="457" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="vpd-2w-oHQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUx-4J-Cy6">
+                                <rect key="frame" x="113" y="457" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="SmB-7k-C1H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4EM-Bg-hfR">
+                                <rect key="frame" x="179" y="457" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="d0I-T2-Ojh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4A-Sl-XEV">
+                                <rect key="frame" x="228" y="457" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="2nZ-aQ-VEc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5o-S5-U30">
+                                <rect key="frame" x="64" y="87" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="7cG-hf-5hS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQ3-32-0Dx">
+                                <rect key="frame" x="113" y="87" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="nC3-jd-68q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNP-fU-IxE">
+                                <rect key="frame" x="179" y="87" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="1dN-h4-gal"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2F-A4-H8y">
+                                <rect key="frame" x="228" y="87" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="au7-a0-elD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JpK-46-C8R">
+                                <rect key="frame" x="276" y="87" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="gDE-cU-4Kn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5T-4a-WJE">
+                                <rect key="frame" x="64" y="135" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="ht6-hN-PlO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBd-sO-rpH">
+                                <rect key="frame" x="113" y="135" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="Xn0-j9-FF1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x89-7b-myr">
+                                <rect key="frame" x="179" y="135" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="k5R-Rh-Neb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVS-ch-dIq">
+                                <rect key="frame" x="228" y="135" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="hsz-4X-fri"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMg-Vm-nL0">
+                                <rect key="frame" x="276" y="135" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelected:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="t82-3c-Pbs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1g-Oy-LBi">
+                                <rect key="frame" x="0.0" y="525" width="325" height="45"/>
+                                <color key="backgroundColor" red="0.28235294119999998" green="0.4431372549" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Book A cab">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="seatSelectionCompletedBtn:" destination="fcW-BT-4iJ" eventType="touchUpInside" id="Vw6-5a-cZa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87843143940000001" green="0.84705889229999998" blue="0.77254909279999995" alpha="0.75" colorSpace="deviceRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Book Seats" id="p9W-Ju-4Zo"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="367" height="667"/>
+                    <connections>
+                        <outletCollection property="seatBtn" destination="522-sB-CxO" collectionClass="NSMutableArray" id="84s-JB-EIE"/>
+                        <outletCollection property="seatBtn" destination="v5o-S5-U30" collectionClass="NSMutableArray" id="hkc-0I-JX2"/>
+                        <outletCollection property="seatBtn" destination="jQ3-32-0Dx" collectionClass="NSMutableArray" id="6Rb-yO-Ydl"/>
+                        <outletCollection property="seatBtn" destination="lNP-fU-IxE" collectionClass="NSMutableArray" id="lCa-FT-AwU"/>
+                        <outletCollection property="seatBtn" destination="P2F-A4-H8y" collectionClass="NSMutableArray" id="LiN-Rm-t1U"/>
+                        <outletCollection property="seatBtn" destination="JpK-46-C8R" collectionClass="NSMutableArray" id="i6j-1U-iYe"/>
+                        <outletCollection property="seatBtn" destination="qBM-Sa-c4I" collectionClass="NSMutableArray" id="AcJ-nF-iKe"/>
+                        <outletCollection property="seatBtn" destination="n5T-4a-WJE" collectionClass="NSMutableArray" id="qcL-M5-ioc"/>
+                        <outletCollection property="seatBtn" destination="UBd-sO-rpH" collectionClass="NSMutableArray" id="b5f-0o-GYr"/>
+                        <outletCollection property="seatBtn" destination="x89-7b-myr" collectionClass="NSMutableArray" id="jhX-eW-RmP"/>
+                        <outletCollection property="seatBtn" destination="qVS-ch-dIq" collectionClass="NSMutableArray" id="yJ5-UN-Kf1"/>
+                        <outletCollection property="seatBtn" destination="nMg-Vm-nL0" collectionClass="NSMutableArray" id="NiL-N8-ZAl"/>
+                        <outletCollection property="seatBtn" destination="A9H-Ge-5sO" collectionClass="NSMutableArray" id="0Y8-ja-G5M"/>
+                        <outletCollection property="seatBtn" destination="qOy-G7-DtJ" collectionClass="NSMutableArray" id="XbC-ii-NnK"/>
+                        <outletCollection property="seatBtn" destination="5dZ-S0-koL" collectionClass="NSMutableArray" id="gMl-W0-ERI"/>
+                        <outletCollection property="seatBtn" destination="Rgg-lV-jiz" collectionClass="NSMutableArray" id="Ve1-QU-j6W"/>
+                        <outletCollection property="seatBtn" destination="iNW-7R-obv" collectionClass="NSMutableArray" id="tB1-mU-TzK"/>
+                        <outletCollection property="seatBtn" destination="cJw-cJ-tjb" collectionClass="NSMutableArray" id="tRd-kf-sEu"/>
+                        <outletCollection property="seatBtn" destination="02s-EB-qdC" collectionClass="NSMutableArray" id="mdc-cI-nDQ"/>
+                        <outletCollection property="seatBtn" destination="SFX-cC-wdg" collectionClass="NSMutableArray" id="tJj-Vl-mHJ"/>
+                        <outletCollection property="seatBtn" destination="Jco-SQ-KDS" collectionClass="NSMutableArray" id="6Ar-1a-UoA"/>
+                        <outletCollection property="seatBtn" destination="mkD-pg-Lna" collectionClass="NSMutableArray" id="US9-mb-vle"/>
+                        <outletCollection property="seatBtn" destination="5QJ-2W-Jnx" collectionClass="NSMutableArray" id="APK-wf-ryt"/>
+                        <outletCollection property="seatBtn" destination="gdu-aq-mUs" collectionClass="NSMutableArray" id="CnE-Ab-aO8"/>
+                        <outletCollection property="seatBtn" destination="MGt-vU-5Nl" collectionClass="NSMutableArray" id="qjS-KA-cxb"/>
+                        <outletCollection property="seatBtn" destination="5tV-HU-pVB" collectionClass="NSMutableArray" id="aoc-73-4Gu"/>
+                        <outletCollection property="seatBtn" destination="28U-0d-8Dz" collectionClass="NSMutableArray" id="ai8-BQ-neF"/>
+                        <outletCollection property="seatBtn" destination="IHF-a0-AlN" collectionClass="NSMutableArray" id="nCW-aG-rOb"/>
+                        <outletCollection property="seatBtn" destination="igJ-Ib-xSF" collectionClass="NSMutableArray" id="Gt7-UW-SIm"/>
+                        <outletCollection property="seatBtn" destination="lqn-l8-sIS" collectionClass="NSMutableArray" id="PG1-dh-JwO"/>
+                        <outletCollection property="seatBtn" destination="Wl4-hH-tkx" collectionClass="NSMutableArray" id="qRN-Cj-bwJ"/>
+                        <outletCollection property="seatBtn" destination="yuC-xF-S6b" collectionClass="NSMutableArray" id="eJ3-ep-sha"/>
+                        <outletCollection property="seatBtn" destination="Yte-mA-oXk" collectionClass="NSMutableArray" id="FBz-T4-nog"/>
+                        <outletCollection property="seatBtn" destination="WsY-EQ-b2s" collectionClass="NSMutableArray" id="WA8-hl-7gn"/>
+                        <outletCollection property="seatBtn" destination="68z-bF-I5G" collectionClass="NSMutableArray" id="VgD-Ar-Ewx"/>
+                        <outletCollection property="seatBtn" destination="sbo-Mg-C0O" collectionClass="NSMutableArray" id="Yjn-qy-19V"/>
+                        <outletCollection property="seatBtn" destination="ws2-ra-Yj8" collectionClass="NSMutableArray" id="3TE-je-NEf"/>
+                        <outletCollection property="seatBtn" destination="OaV-SV-Gkv" collectionClass="NSMutableArray" id="E31-UJ-HPd"/>
+                        <outletCollection property="seatBtn" destination="VXh-0e-S0r" collectionClass="NSMutableArray" id="FZp-51-wBG"/>
+                        <outletCollection property="seatBtn" destination="WDk-HJ-JLa" collectionClass="NSMutableArray" id="6Jh-fe-OAD"/>
+                        <outletCollection property="seatBtn" destination="WM5-Wa-mwd" collectionClass="NSMutableArray" id="BIt-v5-T1G"/>
+                        <outletCollection property="seatBtn" destination="WtQ-Oy-PeW" collectionClass="NSMutableArray" id="lWB-4e-cKL"/>
+                        <outletCollection property="seatBtn" destination="sBl-nR-xTA" collectionClass="NSMutableArray" id="byY-f5-naS"/>
+                        <outletCollection property="seatBtn" destination="DBJ-ws-d9Q" collectionClass="NSMutableArray" id="baZ-ZY-eTX"/>
+                        <outletCollection property="seatBtn" destination="22C-zv-2Jk" collectionClass="NSMutableArray" id="gjX-KD-Mbo"/>
+                        <outletCollection property="seatBtn" destination="0al-1m-w5i" collectionClass="NSMutableArray" id="icW-pH-Pxd"/>
+                        <outletCollection property="seatBtn" destination="cqr-sK-fjK" collectionClass="NSMutableArray" id="Gr9-kQ-jmH"/>
+                        <outletCollection property="seatBtn" destination="TUx-4J-Cy6" collectionClass="NSMutableArray" id="oI6-M8-zWz"/>
+                        <outletCollection property="seatBtn" destination="4EM-Bg-hfR" collectionClass="NSMutableArray" id="k3T-dX-3nF"/>
+                        <outletCollection property="seatBtn" destination="R4A-Sl-XEV" collectionClass="NSMutableArray" id="fmv-V7-7ac"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6cd-lm-xj9" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2015.5" y="115.5"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "25898FFCF1CA5E6C10FD484309CBE02EBF25F4CA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "25898FFCF1CA5E6C10FD484309CBE02EBF25F4CA" : 0,
+    "E543784B22ABBAA8AEAABF270DEEA5E68235D4D7" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A29C6F1A-0D5D-4D19-8353-43A3C50DBF91",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "25898FFCF1CA5E6C10FD484309CBE02EBF25F4CA" : "OlaAPIHackathon\/",
+    "E543784B22ABBAA8AEAABF270DEEA5E68235D4D7" : "CodeRep"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Feed Me",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Feed Me.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/gitlab.com\/cyberpunk\/OlaAPIHackathon.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "25898FFCF1CA5E6C10FD484309CBE02EBF25F4CA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/gitlab.com\/vnayakd\/CodeRep.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E543784B22ABBAA8AEAABF270DEEA5E68235D4D7"
+    }
+  ]
+}

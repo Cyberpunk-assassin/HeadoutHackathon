@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Carousel View Controller-->
+        <scene sceneID="rG5-FQ-wf9">
+            <objects>
+                <viewController storyboardIdentifier="CarouselViewController" id="xDM-Ms-ZyV" customClass="CarouselViewController" customModule="Feed_Me" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JYm-td-Ucg"/>
+                        <viewControllerLayoutGuide type="bottom" id="lK7-IB-Skm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="02f-rX-Gjg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="oWM-HP-QNL">
+                                <rect key="frame" x="-158" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <view contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kjI-e3-Ff2" customClass="iCarousel">
+                                <rect key="frame" x="-158" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Arrival" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V4p-Rm-xOQ">
+                                        <rect key="frame" x="198" y="412" width="48" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Departure" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JA-rc-YSb">
+                                        <rect key="frame" x="339" y="412" width="76" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Arrival Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZT0-mJ-7AA">
+                                        <rect key="frame" x="198" y="473" width="91" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWa-T3-jme">
+                                        <rect key="frame" x="339" y="473" width="38" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Arrival" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uoq-MY-qKW">
+                                        <rect key="frame" x="198" y="441" width="100" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Departure" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yj0-Sk-vlY">
+                                        <rect key="frame" x="339" y="440" width="100" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3le-uT-xcc">
+                                        <rect key="frame" x="261" y="383" width="78" height="21"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnL-XG-iMi">
+                                        <rect key="frame" x="266" y="517" width="68" height="30"/>
+                                        <state key="normal" title="Try Ola">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnTryOlatapped:" destination="xDM-Ms-ZyV" eventType="touchUpInside" id="FED-Qa-WaH"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dto-U8-fy3">
+                                        <rect key="frame" x="219" y="344" width="163" height="21"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zs1-7N-6b1">
+                                        <rect key="frame" x="127" y="92" width="346" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="xDM-Ms-ZyV" id="s9Z-AO-gVp"/>
+                                    <outlet property="delegate" destination="xDM-Ms-ZyV" id="qRC-bZ-b4z"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kjI-e3-Ff2" firstAttribute="top" secondItem="02f-rX-Gjg" secondAttribute="top" id="9fJ-Q6-QPu"/>
+                            <constraint firstItem="oWM-HP-QNL" firstAttribute="top" secondItem="kjI-e3-Ff2" secondAttribute="top" id="BME-q8-Gry"/>
+                            <constraint firstItem="kjI-e3-Ff2" firstAttribute="bottom" secondItem="lK7-IB-Skm" secondAttribute="top" id="FNk-d3-H5B"/>
+                            <constraint firstAttribute="trailing" secondItem="oWM-HP-QNL" secondAttribute="trailing" constant="158" id="Uqg-Oa-QVF"/>
+                            <constraint firstItem="kjI-e3-Ff2" firstAttribute="leading" secondItem="oWM-HP-QNL" secondAttribute="leading" id="dNb-5x-hPo"/>
+                            <constraint firstItem="oWM-HP-QNL" firstAttribute="bottom" secondItem="lK7-IB-Skm" secondAttribute="top" id="hkt-V8-pLv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="carousel" destination="kjI-e3-Ff2" id="0Ud-pi-WLo"/>
+                        <outlet property="lblArrivalPlacePlace" destination="uoq-MY-qKW" id="0UP-GX-bmu"/>
+                        <outlet property="lblArrivalTime" destination="aWa-T3-jme" id="52w-mf-e2m"/>
+                        <outlet property="lblCode" destination="3le-uT-xcc" id="Pha-H1-21q"/>
+                        <outlet property="lblDeparturePlace" destination="Yj0-Sk-vlY" id="mlz-OI-hxe"/>
+                        <outlet property="lblFareEstimate" destination="dto-U8-fy3" id="5x6-R8-3U3"/>
+                        <outlet property="lblFlightName" destination="zs1-7N-6b1" id="ga5-5T-0mp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hu7-3Y-ix1" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-93" y="254"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="50" height="468"/>
+    </resources>
+</document>

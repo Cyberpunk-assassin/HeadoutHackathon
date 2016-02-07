@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A29C6F1A-0D5D-4D19-8353-43A3C50DBF91</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Feed Me</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>25898FFCF1CA5E6C10FD484309CBE02EBF25F4CA</key>
+		<string>https://gitlab.com/cyberpunk/OlaAPIHackathon.git</string>
+		<key>E543784B22ABBAA8AEAABF270DEEA5E68235D4D7</key>
+		<string>https://gitlab.com/vnayakd/CodeRep.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Feed Me.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>25898FFCF1CA5E6C10FD484309CBE02EBF25F4CA</key>
+		<string>../..</string>
+		<key>E543784B22ABBAA8AEAABF270DEEA5E68235D4D7</key>
+		<string>../../../CodeRep</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://gitlab.com/cyberpunk/OlaAPIHackathon.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>25898FFCF1CA5E6C10FD484309CBE02EBF25F4CA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E543784B22ABBAA8AEAABF270DEEA5E68235D4D7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CodeRep</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>25898FFCF1CA5E6C10FD484309CBE02EBF25F4CA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OlaAPIHackathon</string>
+		</dict>
+	</array>
+</dict>
+</plist>
